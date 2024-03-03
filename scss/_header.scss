@@ -1,0 +1,28 @@
+.header-container {
+    padding-top: var(--64px);
+    padding-inline: var(--padding-desktop);
+	background-color: #777;
+	height: 50vh;
+
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-ul {
+			display: flex;
+            gap: var(--32px);
+
+            li {
+                font-size: var(--15px);
+                color: var(--clr-white);
+            }
+		}
+	}
+}
+
+// @media (min-width: 768px) {
+// 	.hero-img {
+// 		background-image: url('../images/desktop/image-hero.jpg');
+// 	}
+// }

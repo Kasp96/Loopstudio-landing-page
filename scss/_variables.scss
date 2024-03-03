@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-black: hsl(0, 0%, 0%);
+	--gray-500: hsl(0, 0%, 55%);
+	--gray-800: hsl(0, 0%, 41%);
+
+	--ff-primary: 'Alata', sans-serif;
+	--ff-secondary: 'Josefin Sans', sans-serif;
+
+	--fw-m: 300;
+	--fw-l: 400;
+
+	--14px: 0.875rem;
+	--15px: 0.9375rem;
+	--16px: 1rem;
+	--18px: 1.125rem;
+	--20px: 1.25rem;
+	--22px: 1.375rem;
+	--24px: 1.5rem;
+	--26px: 1.625rem;
+	--28px: 1.75rem;
+	--30px: 1.875rem;
+	--32px: 2rem;
+	--34px: 2.125rem;
+	--36px: 2.25rem;
+	--38px: 2.375rem;
+	--40px: 2.5rem;
+	--42px: 2.625rem;
+	--44px: 2.75rem;
+	--46px: 2.875rem;
+	--48px: 3rem;
+	--50px: 3.125rem;
+	--52px: 3.25rem;
+	--54px: 3.375rem;
+	--56px: 3.5rem;
+	--58px: 3.625rem;
+	--60px: 3.75rem;
+	--62px: 3.875rem;
+	--64px: 4rem;
+	--66px: 4.125rem;
+	--68px: 4.25rem;
+	--70px: 4.375rem;
+	--72px: 4.5rem;
+	--80px: 5rem;
+	--96px: 6rem;
+	--112px: 7rem;
+	--128px: 8rem;
+
+	--padding-desktop: 10rem;
+}
+
+body {
+	font-family: 'Alata', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+button,
+li,
+svg {
+	cursor: pointer;
+}
