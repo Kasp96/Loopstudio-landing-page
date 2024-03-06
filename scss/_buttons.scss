@@ -1,0 +1,23 @@
+.open-nav,
+.close-nav {
+	position: absolute;
+	right: 0.5rem;
+	padding: 1rem;
+}
+
+.close-nav {
+	display: none;
+}
+.show {
+	display: flex;
+}
+.hide {
+	display: none;
+}
+
+@media (min-width: 48rem) {
+	.open-nav,
+	.close-nav {
+		display: none;
+	}
+}
