@@ -9,8 +9,8 @@
 :root {
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-black: hsl(0, 0%, 0%);
-	--gray-500: hsl(0, 0%, 55%);
-	--gray-800: hsl(0, 0%, 41%);
+	--clr-gray-500: hsl(0, 0%, 55%);
+	--clr-gray-800: hsl(0, 0%, 41%);
 
 	--ff-primary: 'Alata', sans-serif;
 	--ff-secondary: 'Josefin Sans', sans-serif;
@@ -23,6 +23,7 @@
 	--14px: 0.875rem;
 	--15px: 0.9375rem;
 	--16px: 1rem;
+	--17px: 1.0625rem;
 	--18px: 1.125rem;
 	--20px: 1.25rem;
 	--22px: 1.375rem;
@@ -57,6 +58,7 @@
 	--128px: 8rem;
 
 	--padding-desktop: 10rem;
+	--padding-inline: clamp(2rem, 10vw, 10rem);
 }
 
 body {
@@ -65,7 +67,8 @@ body {
 }
 
 img,
-svg {
+svg,
+picture {
 	display: block;
 	max-width: 100%;
 }
@@ -80,4 +83,16 @@ li,
 svg,
 .nav-btn {
 	cursor: pointer;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: var(--24px);
+}
+
+@media (min-width: 48rem) {
+	.wrapper {
+		padding-inline: var(--40px);
+	}
 }

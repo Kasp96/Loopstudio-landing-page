@@ -1,6 +1,7 @@
 const navBtns = document.querySelectorAll('.nav-btn');
 const ulList = document.querySelector('.nav-ul');
 const navItems = document.querySelectorAll('.nav-ul li');
+const body = document.querySelector('body');
 
 navBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {
@@ -8,6 +9,7 @@ navBtns.forEach((btn) => {
 		navBtns[0].classList.toggle('hide');
 		navBtns[1].classList.toggle('show');
 		ulList.classList.toggle('active');
+		body.classList.toggle('freeze-nav');
 	});
 });
 
