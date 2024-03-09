@@ -9,6 +9,7 @@
 :root {
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
+  --clr-gray-200: hsl(0, 0%, 85%);
   --clr-gray-500: hsl(0, 0%, 55%);
   --clr-gray-800: hsl(0, 0%, 41%);
   --ff-primary: "Alata", sans-serif;
@@ -77,19 +78,22 @@ ol {
 button,
 li,
 svg,
-.nav-btn {
+.nav-btn,
+.flex-element {
   cursor: pointer;
 }
 
 .wrapper {
   max-width: 1200px;
-  margin: 0 auto;
   padding-inline: var(--24px);
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (min-width: 48rem) {
   .wrapper {
     padding-inline: var(--40px);
+    text-align: left;
   }
 }
 .open-nav,
@@ -115,10 +119,31 @@ svg,
   overflow: hidden;
 }
 
+.button {
+  width: 150px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: var(--15px);
+  font-family: var(--ff-primary);
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
 @media (min-width: 48rem) {
   .open-nav,
   .close-nav {
     display: none;
+  }
+  .button {
+    position: absolute;
+    right: 0;
   }
 }
 .top-container {
@@ -210,7 +235,7 @@ svg,
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
   }
   .top-container .nav-ul {
@@ -260,6 +285,11 @@ svg,
     font-size: clamp(50px, 6vw, 72px);
   }
 }
+@media (min-width: 87.5rem) {
+  .top-container .nav li {
+    font-size: var(--16px);
+  }
+}
 .grid {
   display: grid;
   text-align: center;
@@ -279,6 +309,50 @@ svg,
   padding-inline: var(--16px);
   color: var(--clr-gray-500);
   line-height: var(--24px);
+}
+
+.cards {
+  padding-top: var(--80px);
+}
+.cards .card-container {
+  display: flex;
+  flex-direction: column;
+}
+.cards .card-container h2 {
+  padding-bottom: var(--22px);
+  font-size: var(--32px);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-m);
+  text-transform: uppercase;
+}
+.cards .card-container .flex-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--24px);
+  padding-top: var(--28px);
+  margin-bottom: var(--32px);
+}
+.cards .card-container .flex-group .flex-element {
+  position: relative;
+  overflow: hidden;
+  transform: all 0.3s;
+}
+.cards .card-container .flex-group .flex-element picture {
+  transition: all 0.3s;
+}
+.cards .card-container .flex-group .flex-element h3 {
+  max-width: 7.5rem;
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  color: var(--clr-gray-200);
+  font-size: var(--22px);
+  font-weight: var(--fw-m);
+  text-transform: uppercase;
+  text-align: left;
+}
+.cards .card-container .flex-group .flex-element:hover picture {
+  scale: 1.1;
 }
 
 @media (min-width: 48rem) {
@@ -304,6 +378,24 @@ svg,
   }
   .grid .about-content p {
     padding-inline: 0;
+  }
+  .cards {
+    position: relative;
+    padding-top: var(--padding-desktop);
+  }
+  .cards .card-container h2 {
+    font-size: clamp(2rem, 4vw, 2.875rem);
+  }
+  .cards .card-container .flex-group {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cards .card-container .flex-group .flex-element h3 {
+    left: 1.25rem;
+    bottom: 1.25rem;
+    font-size: var(--28px);
+    max-width: 10rem;
   }
 }
 @keyframes navItemsAnimation {

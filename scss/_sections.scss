@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .grid {
 	display: grid;
 	text-align: center;
@@ -9,11 +11,7 @@
 
 	.about-content {
 		h2 {
-			padding-bottom: var(--22px);
-			font-size: var(--32px);
-			font-family: var(--ff-secondary);
-			font-weight: var(--fw-m);
-			text-transform: uppercase;
+			@include secondHeading;
 		}
 
 		p {
@@ -23,7 +21,49 @@
 		}
 	}
 }
+.cards {
+	padding-top: var(--80px);
 
+	.card-container {
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			@include secondHeading;
+		}
+		.flex-group {
+			display: flex;
+			flex-direction: column;
+			gap: var(--24px);
+			padding-top: var(--28px);
+			margin-bottom: var(--32px);
+
+			.flex-element {
+				position: relative;
+				overflow: hidden;
+				transform: all 0.3s;
+
+				picture {
+					transition: all 0.3s;
+				}
+				h3 {
+					max-width: 7.5rem;
+					position: absolute;
+					left: 1.25rem;
+					bottom: 1.25rem;
+					color: var(--clr-gray-200);
+					font-size: var(--22px);
+					font-weight: var(--fw-m);
+					text-transform: uppercase;
+					text-align: left;
+				}
+			}
+			.flex-element:hover picture {
+				scale: 1.1;
+			}
+		}
+	}
+}
 @media (min-width: 48rem) {
 	.grid {
 		grid-template-columns: repeat(6, 1fr);
@@ -48,6 +88,31 @@
 			}
 			p {
 				padding-inline: 0;
+			}
+		}
+	}
+
+	.cards {
+		position: relative;
+		padding-top: var(--padding-desktop);
+
+		.card-container {
+			h2 {
+				font-size: clamp(2rem, 4vw, 2.875rem);
+			}
+			.flex-group {
+				flex-direction: row;
+				justify-content: center;
+				flex-wrap: wrap;
+
+				.flex-element {
+					h3 {
+						left: 1.25rem;
+						bottom: 1.25rem;
+						font-size: var(--28px);
+						max-width: 10rem;
+					}
+				}
 			}
 		}
 	}

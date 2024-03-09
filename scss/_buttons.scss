@@ -1,7 +1,7 @@
 .open-nav,
 .close-nav {
 	position: absolute;
-	
+
 	right: 0;
 	padding: 1.5rem;
 }
@@ -17,10 +17,29 @@
 .freeze-nav {
 	overflow: hidden;
 }
+.button {
+	width: 150px;
+	padding: 10px 0;
+	margin: 0 auto;
+	background: transparent;
+	text-transform: uppercase;
+	font-size: var(--15px);
+	font-family: var(--ff-primary);
+	letter-spacing: 3px;
+	transition: all 0.3s;
+}
+.button:hover {
+	background: var(--clr-black);
+	color: var(--clr-white);
+}
 
 @media (min-width: 48rem) {
 	.open-nav,
 	.close-nav {
 		display: none;
+	}
+	.button {
+		position: absolute;
+		right: 0;
 	}
 }
