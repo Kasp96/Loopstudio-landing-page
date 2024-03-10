@@ -50,7 +50,7 @@
 			}
 
 			li::before {
-				@include liPseudoElements;
+				@include pseudoElements;
 				top: 45%;
 				right: 0;
 				height: 50%;
@@ -120,17 +120,11 @@
 				}
 
 				li::after {
-					@include liPseudoElements;
-					width: 50%;
-					bottom: 0rem;
-					left: 50%;
-					transform: translateX(-50%);
-					height: 2px;
-					background-color: var(--clr-white);
+					@include pseudoElements;
+					@include itemsAnimation;
 				}
 				li:hover::after {
-					opacity: 1;
-					bottom: -0.75rem;
+					@include hoverAnimation;
 				}
 			}
 		}

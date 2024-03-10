@@ -20,7 +20,8 @@
 .button {
 	width: 150px;
 	padding: 10px 0;
-	margin: 0 auto;
+	margin-top: var(--32px);
+	margin-inline: auto;
 	background: transparent;
 	text-transform: uppercase;
 	font-size: var(--15px);
