@@ -425,17 +425,24 @@ svg,
   display: flex;
   gap: var(--16px);
 }
-.footer .footer-container-media-icon {
+.footer .footer-container-media a {
   position: relative;
 }
-.footer .footer-container-media-icon::after {
+.footer .footer-container-media a::after {
   position: absolute;
-  content: "212121";
-  top: 10rem;
-  left: 1rem;
-  width: 10px;
-  height: 10px;
-  z-index: 10;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  width: 50%;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: var(--clr-white);
+}
+.footer .footer-container-media a:hover::after {
+  opacity: 1;
+  bottom: -0.75rem;
 }
 .footer .footer-container-bottom {
   margin-top: var(--18px);

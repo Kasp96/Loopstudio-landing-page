@@ -124,24 +124,16 @@
 			display: flex;
 			gap: var(--16px);
 
-			&-icon {
+			a {
 				position: relative;
-				// border: 2px solid orange;
 			}
-			&-icon::after {
-				position: absolute;
-				content: '212121';
-				top: 10rem;
-				left: 1rem;
-				width: 10px;
-				height: 10px;
-				z-index: 10;
-				// @include pseudoElements;
-				// @include itemsAnimation;
+			a::after {
+				@include pseudoElements;
+				@include itemsAnimation;
 			}
-			// &-icon:hover::after {
-			// 	// @include hoverAnimation;
-			// }
+			a:hover::after {
+				@include hoverAnimation;
+			}
 		}
 		&-bottom {
 			margin-top: var(--18px);
