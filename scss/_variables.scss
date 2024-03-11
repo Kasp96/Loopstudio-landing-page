@@ -94,6 +94,9 @@ svg,
 	margin: 0 auto;
 	text-align: center;
 }
+.gray-filter {
+	animation: imagesAnimation 0.5s both;
+}
 
 @media (min-width: 48rem) {
 	.wrapper {

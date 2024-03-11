@@ -91,6 +91,10 @@ svg,
   text-align: center;
 }
 
+.gray-filter {
+  animation: imagesAnimation 0.5s both;
+}
+
 @media (min-width: 48rem) {
   .wrapper {
     padding-inline: var(--40px);
@@ -540,4 +544,13 @@ svg,
 }
 .nav-items-animation {
   animation: navItemsAnimation 1s both;
+}
+
+@keyframes imagesAnimation {
+  from {
+    filter: grayscale(0);
+  }
+  to {
+    filter: grayscale(1);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@ const navBtns = document.querySelectorAll('.nav-btn');
 const ulList = document.querySelector('.nav-ul');
 const navItems = document.querySelectorAll('.nav-ul li');
 const body = document.querySelector('body');
+const images = document.querySelectorAll('.flex-element');
 
 navBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {
@@ -22,3 +23,19 @@ const handleNavItemAnimation = () => {
 		delay++;
 	});
 };
+
+images.forEach((img) => {
+	img.addEventListener('mouseover', () => {
+		for (const image of images) {
+			if (img !== image) {
+				image.classList.add('gray-filter');
+			}
+		}
+	});
+
+	img.addEventListener('mouseleave', () => {
+		for (const image of images) {
+			image.classList.remove('gray-filter');
+		}
+	});
+});

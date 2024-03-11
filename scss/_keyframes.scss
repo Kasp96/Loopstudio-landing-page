@@ -10,3 +10,11 @@
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
 }
+@keyframes imagesAnimation {
+	from {
+		filter: grayscale(0);
+	}
+	to {
+		filter: grayscale(1);
+	}
+}
